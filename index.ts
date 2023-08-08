@@ -1,3 +1,4 @@
+import cli from "cli";
 import random from "lodash/random";
 import maxBy from "lodash/maxBy";
 import filter from "lodash/filter";
@@ -77,8 +78,6 @@ for (let i = 0; i < keys.length; i++) {
       };
     });
 
-    // console.log(mappedNativeBalance);
-
     const filteredNativeBalance = filter(
       mappedNativeBalance,
       (item) =>
@@ -87,7 +86,7 @@ for (let i = 0; i < keys.length; i++) {
     );
 
     if (filteredNativeBalance.length === 0) {
-      console.log("Networks with enough native tokens not found");
+      console.log(" Networks with enough native tokens not found");
       continue;
     }
 
@@ -98,6 +97,7 @@ for (let i = 0; i < keys.length; i++) {
 
     await bridgeOmni(key, Token.STG, fromNetwork, toNetwork);
   } catch (e) {
+    cli.spinner("", true);
     console.log("Error", e);
   }
 

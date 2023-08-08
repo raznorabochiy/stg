@@ -15,7 +15,7 @@ export const RPC_URL = {
   [Network.BSC]: "https://bsc.publicnode.com",
   [Network.ETHEREUM]: "https://eth.llamarpc.com",
   [Network.FANTOM]: "https://rpc.ftm.tools",
-  [Network.OPTIMISM]: "https://endpoints.omniatech.io/v1/op/mainnet/public",
+  [Network.OPTIMISM]: "https://1rpc.io/op",
   [Network.POLYGON]: "https://polygon-bor.publicnode.com",
 };
 
